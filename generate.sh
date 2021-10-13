@@ -21,6 +21,7 @@ user nobody
 group nogroup
 daemon
 verb 3
+log-append /var/log/openvpn.log
 EOF
 
 cat <<EOF >server.ovpn
@@ -36,6 +37,7 @@ user nobody
 group nogroup
 daemon
 verb 3
+log-append /var/log/openvpn.log
 EOF
 
 cp client.ovpn /etc/openvpn/client/client.ovpn
