@@ -40,6 +40,5 @@ verb 3
 log-append /var/log/openvpn.log
 EOF
 
-cp client.ovpn /etc/openvpn/client/client.ovpn
-cp server.ovpn /etc/openvpn/server/server.ovpn
-rm -rf {client,server}.ovpn
+mv client.ovpn /etc/openvpn/client/client.ovpn
+mv server.ovpn /etc/openvpn/server/server.ovpn
