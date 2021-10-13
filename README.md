@@ -13,6 +13,7 @@ On both client and server, launch the command: `sudo bash generate.sh <REMOTE_IP
 ## Run the VPN
 
 On the server run: `sudo bash server.sh`
+
 On the client run: `sudo bash client.sh`
 
 ## Test the VPN
