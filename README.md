@@ -4,7 +4,10 @@ Bidirectionnal point-to-point VPN configuration for SpaceX Starlink using OpenVP
 
 ## Requirements
 
-Linux system
+- Linux system
+- OpenVPN version >=2.4
+
+Only tested under ubuntu 18.04, 20.04 and 22.04 
 
 ## Installation
 
