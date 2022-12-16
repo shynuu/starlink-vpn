@@ -8,9 +8,10 @@ apt-get update
 apt-get install -y openvpn
 
 cat <<EOF >client.ovpn
-remote $REMOTE_IP
+remote $REMOTE_IP 1194 udp
 dev tun
 ifconfig $CLIENT_LOCAL $SERVER_LOCAL
+proto udp4
 port 1194
 comp-lzo
 keepalive 10 60
@@ -27,6 +28,8 @@ EOF
 cat <<EOF >server.ovpn
 dev tun
 ifconfig $SERVER_LOCAL $CLIENT_LOCAL
+bind $REMOTE_IP:1194
+proto udp4
 port 1194
 comp-lzo
 keepalive 10 60
