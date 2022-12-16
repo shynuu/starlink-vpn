@@ -28,7 +28,7 @@ EOF
 cat <<EOF >server.ovpn
 dev tun
 ifconfig $SERVER_LOCAL $CLIENT_LOCAL
-bind $REMOTE_IP:1194
+local $REMOTE_IP
 proto udp4
 port 1194
 comp-lzo
